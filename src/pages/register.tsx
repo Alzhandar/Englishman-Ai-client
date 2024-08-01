@@ -6,6 +6,7 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, Dialog
 import { Button } from "../components/ui/button"
 import { Label } from "../components/ui/label"
 import { Input } from "../components/ui/input"
+import axios from 'axios';
 
 //@ts-ignore
 const Register = ({ isOpen, setOpen, setOpenLogin }) => {
@@ -22,7 +23,7 @@ const Register = ({ isOpen, setOpen, setOpenLogin }) => {
             return alert('Passwords do not match');
         }
         try {
-            const res = await api.post('/auth/register', { email, password, confirmPassword });
+            const res = await axios.post('https://englishmanawt.onrender.com/api/auth/register', { email, password, confirmPassword });
             localStorage.setItem('token', res.data.token);
             router.push('/');
             setOpen(false); // Close register modal

@@ -9,18 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@react-pdf-viewer/toolbar": "^3.12.0",
+    "@react-pdf-viewer/zoom": "^3.12.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "jspdf": "^2.5.1",
     "lucide-react": "^0.400.0",
     "next": "14.2.4",
+    "next-transpile-modules": "^10.0.1",
+    "pdfjs-dist": "^2.10.377",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-pdf": "^9.1.0",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

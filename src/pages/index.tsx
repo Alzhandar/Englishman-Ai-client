@@ -1,19 +1,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Img from './images/teacher1-870x420.jpg';
-import Register from '../pages/register';
 import Login from '../pages/login';
 import { useRouter } from 'next/router';
 
 const Home = () => {
-    const [isRegisterOpen, setRegisterOpen] = useState(false);
     const [isLoginOpen, setLoginOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const router = useRouter();
 
-    const handleRegisterClick = () => {
-        setRegisterOpen(true);
-    };
     const handleLoginClick = () => {
         setLoginOpen(true);
     };
@@ -32,19 +27,12 @@ const Home = () => {
                         <div className='flex justify-row items-center'>
                             <GlobeIcon className="mr-5 w-6 h-6 text-primary-foreground" />
                             <Link href="/" className="text-2xl font-bold text-primary text-black" prefetch={false}>
-                                Englishman AWT
+                                EnglishmanAI
                             </Link>
                         </div>
                         <div>
                             {!isLoggedIn ? (
                                 <>
-                                    <Link
-                                        href="#"
-                                        onClick={handleRegisterClick}
-                                        className="bg-red-500 text-white inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                    >
-                                        Register
-                                    </Link>
                                     <Link
                                         href="/"
                                         onClick={handleLoginClick}
@@ -121,11 +109,10 @@ const Home = () => {
                 </main>
                 <footer className="bg-gray-100 py-6">
                     <div className="container mx-auto px-4 text-center text-xs text-muted-foreground sm:px-6 lg:px-8">
-                        &copy; 2024 Englishman AWT. All rights reserved.
+                        &copy; 2024 EnglishmanAI. All rights reserved.
                     </div>
                 </footer>
             </div>
-            <Register isOpen={isRegisterOpen} setOpen={setRegisterOpen} setOpenLogin={setLoginOpen} />
             <Login isOpen={isLoginOpen} setOpen={setLoginOpen} />
         </div>
     )
